@@ -101,19 +101,23 @@ public class HeapSort {
 		// Finding the right index.
 		int right = 2 * index + 2;
 		
-		comparisonCount++;
+		
 		// If left child is larger than root
-        if (left < n && arr.get(left) > arr.get(largest)) {
-            largest = left;
+		if (left < n) {
+            comparisonCount++; // actual comparison
+            if (arr.get(left) > arr.get(largest)) {
+                largest = left;
+            }
         }
         
-        comparisonCount++;
         // If right child is larger than largest so far
-        if (right < n && arr.get(right) > arr.get(largest)) {
-            largest = right;
+		if (right < n) {
+            comparisonCount++; // actual comparison
+            if (arr.get(right) > arr.get(largest)) {
+                largest = right;
+            }
         }
 
-        comparisonCount++;
         // If largest is not root
         if (largest != index) {
             int temp = arr.get(index);
@@ -126,7 +130,7 @@ public class HeapSort {
 	}
 	
 	/*
- 	// = = = = = = = = Test Main Method = = = = = = = = 
+ 	// = = = = = = = = Test Main Method = = = = = = = = =
 	
 	public static void main(String[] args) {
 	
