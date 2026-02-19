@@ -9,8 +9,6 @@ import java.util.ArrayList;
  * @author Benjamin Shaw
  */
 public class HeapSort {
-	@SuppressWarnings("unused")	// This is the original array list that is not being touched.
-	private ArrayList<Integer> originalList = new ArrayList<Integer>();
 	
 	private ArrayList<Integer> sortedList = new ArrayList<Integer>();	// The sorted list.
 	
@@ -19,12 +17,12 @@ public class HeapSort {
 	
 	
 	/**
-	 * 
+	 * Constructor passing in the original list to be copied and have
+	 * the copied version get sorted.
 	 * 
 	 * @param originalList is the original list.
 	 */
 	public HeapSort(ArrayList<Integer> originalList) {
-		this.originalList = originalList;
 		sortedList = sort(originalList);
 	}
 
@@ -85,7 +83,7 @@ public class HeapSort {
 		
 		return sorted;
 	}
-
+	
 	/**
 	 * heapify rearranges the input array to be sorted.
 	 * 
@@ -126,6 +124,7 @@ public class HeapSort {
             heapify(arr, n, largest);
         }
 	}
+	
 	/*
  	// = = = = = = = = Test Main Method = = = = = = = = 
 	
