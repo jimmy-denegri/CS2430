@@ -130,6 +130,8 @@ public class HeapSort {
  	// = = = = = = = = Test Main Method = = = = = = = = 
 	
 	public static void main(String[] args) {
+	
+		// Making an ArrayList and passing in values to get sorted.
 		ArrayList<Integer> arr = new ArrayList<Integer>();
         arr.add(9);
         arr.add(4);
@@ -139,20 +141,25 @@ public class HeapSort {
         arr.add(2);
         arr.add(5);
         
+        
+        // Passing in the ArrayList to be sorted.
         HeapSort sort = new HeapSort(arr);
         
+        
+        // Making sure that the sorting algorithm is doing it's job.
         System.out.println("Sorted: " + sort.getSortedList());
         System.out.println();
 
+		// Making sure the array that is passed into the method stays the same.
         System.out.print("Unsorted: ");
         for (int i = 0; i < arr.size(); ++i) {
             System.out.print(arr.get(i) + " ");
         }
         System.out.println("\n");
         
+        
+        // Getting the comparison count.
         System.out.println("Comp Count: " + sort.getCompCount());
     }
     */
 }
-
-
