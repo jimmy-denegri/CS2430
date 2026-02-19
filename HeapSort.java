@@ -85,7 +85,14 @@ public class HeapSort {
 		
 		return sorted;
 	}
-	
+
+	/**
+	 * heapify rearranges the input array to be sorted.
+	 * 
+	 * @param arr: the input array to be sorted.
+	 * @param n: the size of the array.
+	 * @param index: the current index of the for loop.
+	 */
 	private void heapify(ArrayList<Integer> arr, int n, int index) {
 		// The largest is the current index.
 		int largest = index;
@@ -145,3 +152,4 @@ public class HeapSort {
     }
     */
 }
+
